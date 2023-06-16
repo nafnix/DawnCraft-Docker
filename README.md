@@ -20,7 +20,7 @@ docker run -dit \
            -e EULA=true \
            -v mc-dawncraft-world:/mc/world \
            --name mc-dawncraft \
-           nafnix/dawncraft-server:1.20
+           nafnix/dawncraft-server
 ```
 
 #### 参数解释（不想了解可以不看）
@@ -38,7 +38,7 @@ docker run -dit \
 - `--name mc-dawncraft`:
   - `--name`: 指定容器名称
   - `mc-dawncraft`: 指定容器名称为 `mc-dawncraft`
-- `nafnix/dawncraft-server:1.20`: 要运行的镜像名称
+- `nafnix/dawncraft-server`: 要运行的镜像名称
 
 ### 停止容器
 
@@ -55,7 +55,7 @@ docker rm mc-dawncraft
 ### 删除镜像
 
 ```sh
-docker rmi nafnix/dawncraft-server:1.20
+docker rmi nafnix/dawncraft-server
 ```
 
 ### 删除地图备份
@@ -78,7 +78,7 @@ docker run -dit \
            -e EULA=true \
            -v mc-dawncraft-world:/mc/world \
            --name mc-dawncraft \
-           nafnix/dawncraft-server:1.20
+           nafnix/dawncraft-server
 ```
 
 ### 指定内存大小: `XMS` 与 `XMX`
@@ -99,7 +99,7 @@ docker run -dit \
            -e XMX=5G \
            -v mc-dawncraft-world:/mc/world \
            --name mc-dawncraft \
-           nafnix/dawncraft-server:1.20
+           nafnix/dawncraft-server
 ```
 
 ## 不同标签说明
