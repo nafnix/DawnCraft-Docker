@@ -1,0 +1,19 @@
+FROM eclipse-temurin:17-jre-alpine
+
+ARG directory=/mc
+
+WORKDIR ${directory}
+
+COPY entrypoint.sh .
+
+RUN chmod +x entrypoint.sh
+
+ENV XMS=2500M XMX=8G EULA=
+
+EXPOSE 25565/TCP
+
+VOLUME "/mc/world"
+
+ENTRYPOINT [ "./entrypoint.sh" ]
+
+CMD ["./run.sh"]
